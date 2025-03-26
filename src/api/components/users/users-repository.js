@@ -1,4 +1,5 @@
 const { Users } = require('../../../models');
+const bcrypt = require('bcrypt');
 
 async function getUsers() {
   return Users.find({});
@@ -35,5 +36,5 @@ module.exports = {
   createUser,
   updateUser,
   changePassword,
-  deleteUser,
+  deleteUser
 };

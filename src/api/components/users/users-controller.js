@@ -1,6 +1,6 @@
 const usersService = require('./users-service');
 const { errorResponder, errorTypes } = require('../../../core/errors');
-const { hashPassword } = require('../../../utils/password');
+const { hashPassword, passwordMatched } = require('../../../utils/password');
 
 async function getUsers(request, response, next) {
   try {
@@ -197,5 +197,5 @@ module.exports = {
   createUser,
   updateUser,
   changePassword,
-  deleteUser,
+  deleteUser  
 };

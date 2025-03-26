@@ -1,5 +1,4 @@
 const express = require('express');
-
 const booksController = require('./books-controller');
 
 const route = express.Router();
@@ -14,8 +13,11 @@ module.exports = (app) => {
   route.post('/', booksController.createBook);
 
   // TODO: Get a book by id
+  route.get('/:id', booksController.getBook);
 
   // TODO: Update a book by id
+  route.put('/:id', booksController.updateBook);
 
   // TODO: Delete a book by id
+  route.delete('/:id', booksController.deleteBook);
 };
